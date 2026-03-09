@@ -4,13 +4,16 @@ include 'koneksi.php';
 
 if (isset($_GET['hapus'])){
     $id = $_GET['hapus'];
-    mysqli_query($conn, 'DELETE FROM MAHASISWA WHERE id = $id');
+
+    $query = "DELETE FROM mahasiswa WHERE id = '$id'";
+
+    mysqli_query($conn, $query);
     header("Location = index.php");
 };
 
 ?>
 
-<a href="tambah.php"> Tambah Siswa</a>
+<a href="tambah.php"> Tambah Siswa</a> <br> <br>
 
 <table border='1' cellpading='10'>
     <tr>
@@ -32,7 +35,7 @@ if (isset($_GET['hapus'])){
         <td><?= $row ["jurusan"] ?></td>
         <td>
             <a href="edit.php?id=<?= $row ['id'] ?>">Edit</a> |
-            <a href="index.php?hapus=<?= $row ['id'] ?>">" onclick="return confirm('Yakin?')">Hapus</a>
+            <a href="index.php?hapus=<?= $row ['id'] ?>" onclick="return confirm('Yakin?')">Hapus</a>
         </td>
       </tr>
     <?php } ?>
