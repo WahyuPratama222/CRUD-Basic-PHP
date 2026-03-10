@@ -15,7 +15,7 @@ if (isset($_GET['hapus'])){
 
 <a href="tambah.php"> Tambah Siswa</a> <br> <br>
 
-<table border='1' cellpading='10'>
+<table border='1' cellpadding='10'>
     <tr>
         <th>Nama</th>
         <th>Kelamin</th>

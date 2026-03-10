@@ -3,12 +3,11 @@
 $host = 'localhost';
 $user = 'root';
 $password = 'WWsjIsd982Wahyu';
-$db = 'latihanutspemweb';
+$database = 'latihanutspemweb';
 
-$conn = mysqli_connect($host, $user, $root, $password);
+$conn = mysqli_connect($host, $user, $password, $database);
 
-if (!$conn) {
-    die ("Koneksi Gagal: " . mysqli_connect_error());
+if (!$conn){
+    die ("Gagal : " . mysqli_connect_error());
 }
-
 ?>
