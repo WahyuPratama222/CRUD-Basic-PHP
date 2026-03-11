@@ -7,8 +7,8 @@ $database = 'latihanutspemweb';
 
 $conn = mysqli_connect($host, $user, $password, $database);
 
-if (!$conn){
-    die ("Koneksi gagal: ". mysqli_connect_error());
+if (!$conn) {
+    die ("Gagal Koneksi : " . mysqli_connect_error());
 }
 
 ?>
